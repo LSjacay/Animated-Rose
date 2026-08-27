@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const endText = document.getElementById('endText');
     const fallingPetalsEl = document.getElementById('fallingPetals');
     const scene = document.querySelector('.scene');
+    const musica = document.getElementById('musicaFondo');
 
     const PETAL_LAYERS = [
         { count: 4, w: 24, h: 46, curl: 78, delayBase: 0, tz: 2, cls: 'petal-bud' },
@@ -209,7 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startButton.addEventListener('click', () => {
-        triggerOverlay.classList.add('fade-out');
+         musica.play();
+         triggerOverlay.classList.add('fade-out');
 
         setTimeout(() => {
             startAnimationSequence();
